@@ -12,14 +12,17 @@
     	// 等待dom加载完毕
     	$(document).ready(function() {
     		$(".level1 > a").click(function() {
-    			$(this).addClass('current').next().show().parent().siblings().children('a').removeClass('current').next().hide();
+    			$(this).addClass('current') //给当前元素添加current样式
+    			.next().show() //下一个同类元素显示
+    			.parent().siblings().children('a').removeClass('current') //父元素中的兄弟元素的子元素<a>一出“current”样式
+    			.next().hide(); //下一个同类元素隐藏
     			return false;
     		});
     	});
     </script>
 </head>
 <body>
-<!-- 初始化 -->
+<!-- 初始化页面 -->
 <div class="box">
 	<ul class="menu">
 		<li class="level1">
