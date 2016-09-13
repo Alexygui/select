@@ -11,7 +11,10 @@
     <script type="text/javascript">
     	// 等待dom加载完毕
     	$(document).ready(function() {
-    		$(this).addClass('current')	
+    		$(".level1 > a").click(function() {
+    			$(this).addClass('current').next().show().parent().siblings().children('a').removeClass('current').next().hide();
+    			return false;
+    		});
     	});
     </script>
 </head>
